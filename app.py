@@ -120,7 +120,7 @@ def fetch_google_reviews(business_name):
     reviews = []
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=True)
 
         page = browser.new_page(
             viewport={"width": 1366, "height": 900}
